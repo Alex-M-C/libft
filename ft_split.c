@@ -58,11 +58,11 @@ char	**ft_split(char const *s, char c)
 		{
 			word_arr[pos] = ft_substr(s, count - word_len, word_len);
 			word_len = 0;
-			pos++;
+			pos++; //Se podria mover esto en lugar del pos de encima como pos++ y ademas añadir un if que haga free de word_arr y devuelva nulo if... return (ft())
 		}
 		else if (s[count] != c)
 			word_len++;
-		count++;
+		count++;//Se podria mover al count de encima?? como count++
 	}
 	word_arr[pos] = (void *)0;
 	return (word_arr);
