@@ -16,11 +16,11 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s != '\0')
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			return ((char *)s);
 		s++;
 	}
-	if (*s == c)
+	if (*s == (unsigned char)c)
 		return ((char *)s);
 	return ((void *)0);
 }
@@ -29,7 +29,7 @@ char	*ft_strchr(const char *s, int c)
 #include <string.h>
 int	main(void)
 {
-	char	*result = strchr("Hola", 'o');
+	char	*result = ft_strchr("tripouille", 't' + 256);
 
 	if (!result)
 	{

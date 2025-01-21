@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 //Allocates memory with malloc(3) for crating a substring from the
 //string S starting at START and with a length of LEN + 1 including 
@@ -33,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[count] = '\0';
 	return (substr);
 }
-
+/*
 #include <stdio.h>
 int	main(void)
 {
@@ -47,4 +48,4 @@ int	main(void)
 	free(result);
 	return (0);
 }
-
+*/

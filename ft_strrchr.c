@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 //@returns A pointer to the last occurrence of the character C in the string S
-//or NULL if any occurrence is found.
+//or NULL if no occurrence is found.
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*match;
@@ -19,22 +19,20 @@ char	*ft_strrchr(const char *s, int c)
 	match = (void *)0;
 	while (*s != '\0')
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			match = (char *)s;
 		s++;
 	}
-	if (*s == c)
+	if (*s == (unsigned char)c)
 		match = (char *)s;
-	if (match)
-		return (match);
-	return ((void *)0);
+	return (match);
 }
 /*
 #include <stdio.h>
 #include <string.h>
 int	main(void)
 {
-	char	*result = ft_strrchr("Hola", 'j');
+	char	*result = ft_strrchr("tripouille", 't' + 256);
 	char	str2[] = "bonjour";
 	char	*str;
 
