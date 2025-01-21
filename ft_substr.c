@@ -40,7 +40,7 @@ int	main(void)
 {
 	char	*result;
 
-	result = ft_substr("Parabrisas", 4, 5);
+	result = ft_substr("Parabrisa", 4, 5);
 	if (!result)
 		printf("%s", "null");
 	else

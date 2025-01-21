@@ -34,7 +34,7 @@ static int	ft_wordcount(char const *s, char c)
 	return (count);
 }
 
-static void	*fr(char **word_arr)
+static void	*ft_fr(char **word_arr)
 {
 	free(word_arr);
 	return ((void *)0);
@@ -65,7 +65,7 @@ char	**ft_split(char const *s, char c)
 			word_arr[pos] = ft_substr(s, count - word_len, word_len);
 			word_len = 0;
 			if (!word_arr[pos++])
-				return (fr(word_arr));
+				return (ft_fr(word_arr));
 		}
 		else if (s[count++] != c)
 			word_len++;
