@@ -12,17 +12,18 @@
 
 #include <stddef.h>
 
-static char	*check_match(char *str, char *to_find, char *to_find_start_ptr)
+static char	*check_match(char *str, char *to_find, char *tf_start_ptr, size_t n)
 {
-	while (*str != '\0' && *to_find != '\0')
+	while (*str != '\0' && *to_find != '\0' && n > 0)
 	{
 		if (*str != *to_find)
 		{
-			to_find = to_find_start_ptr;
+			to_find = tf_start_ptr;
 			break ;
 		}
 		str++;
 		to_find++;
+		n--;
 	}
 	return (to_find);
 }
@@ -35,7 +36,7 @@ static char	*check_match(char *str, char *to_find, char *to_find_start_ptr)
 char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
 	char	*coincidence_ptr;
-	char	*to_find_start_ptr;
+	char	*tf_start_ptr;
 	char	*str_ptr;
 	char	*to_find_ptr;
 
@@ -48,8 +49,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 		if (*str_ptr == *to_find_ptr)
 		{
 			coincidence_ptr = str_ptr;
-			to_find_start_ptr = to_find_ptr;
-			to_find_ptr = check_match(str_ptr, to_find_ptr, to_find_start_ptr);
+			tf_start_ptr = to_find_ptr;
+			to_find_ptr = check_match(str_ptr, to_find_ptr, tf_start_ptr, n);
 			if (*to_find_ptr == '\0')
 				return (coincidence_ptr);
 		}
@@ -63,9 +64,9 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 #include <stdio.h>
 int	main(void)
 {
-	char	test1[] = "Eras una vez Erase unas vez no dos";
-	char	test2[] = "e";
-	char	*result = ft_strnstr(test1, test2, 6);
+	char	test1[] = "aaabcabcd";
+	char	test2[] = "a";
+	char	*result = ft_strnstr(test1, test2, -1);
 
 	if (result)
 		printf("%s\n", result);
