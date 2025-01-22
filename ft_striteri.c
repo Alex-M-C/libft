@@ -15,9 +15,14 @@
 //the character itself, which can be modified if necessary.
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	while (*s != '\0')
+	int		count;
+
+	if (!f)
+		return ;
+	count = 0;
+	while (s[count] != '\0')
 	{
-		f(*s, &*s);
-		s++;
+		f(count, &s[count]);
+		count++;
 	}
 }

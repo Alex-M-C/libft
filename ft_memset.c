@@ -19,8 +19,8 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*ptr_byte;
 
-	if (!s || n == 0)
-		return ((void *)0);
+	if (n == 0)
+		return (s);
 	ptr_byte = (unsigned char *)s;
 	while (n > 0)
 	{
