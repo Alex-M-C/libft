@@ -15,6 +15,8 @@
 //@returns The last node of the list LST
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (!lst)
+		return ((void *)0);
 	while (lst->next)
 	{
 		lst = lst->next;
@@ -26,17 +28,14 @@ t_list	*ft_lstlast(t_list *lst)
 
 int	main(void)
 {
-	t_list	*node1;
-	t_list	*node2;
-	t_list	*node3;
-	t_list	*test;
+	t_list	*l = ((void *)0);
+	t_list	*expected;
+	t_list	*actual;
 
-	node1 = ft_lstnew("algo1");
-	node2 = ft_lstnew("algo2");
-	node3 = ft_lstnew("algo3");
-	node1->next = node2;
-	node2->next = node3;
-	test = ft_lstlast(node1);
-	printf("%s\n", (char *)test->content);
+	expected = ((void *)0);
+	actual = ft_lstlast(l);
+	if (actual == expected)
+		return (0);
+	return (1);
 }
 */

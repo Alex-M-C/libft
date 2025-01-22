@@ -15,16 +15,21 @@
 //Adds the node NEW at the end of the node list LST
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	count;
+	t_list	*node;
 
-	if (!lst || !new)
+	if (!new)
 		return ;
-	count = 0;
-	while (lst[count])
+	else if (!*lst)
 	{
-		count++;
+		*lst = new;
+		return ;
 	}
-	lst[count] = new;
+	node = *lst;
+	while (node->next)
+	{
+		node = node->next;
+	}
+	node->next = new;
 }
 /*
 #include <stdio.h>

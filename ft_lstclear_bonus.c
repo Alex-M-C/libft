@@ -20,15 +20,17 @@ list must be NULL.
 */
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	int	count;
+	t_list	*node;
+	t_list	*temp_node;
 
-	if (!lst || !del)
+	if (!*lst || !del)
 		return ;
-	count = 0;
-	while (lst[count])
+	node = *lst;
+	while (node)
 	{
-		ft_lstdelone(lst[count], del);
-		count++;
+		temp_node = node->next;
+		ft_lstdelone(node, del);
+		node = temp_node;
 	}
-	lst = (void *)0;
+	*lst = (void *)0;
 }
