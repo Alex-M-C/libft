@@ -18,7 +18,6 @@ HEADER = libft.h
 BONUS = ft_lstadd_back_bonus.c	ft_lstdelone_bonus.c	ft_lstmap_bonus.c				\
 		ft_lstadd_front_bonus.c	ft_lstiter_bonus.c		ft_lstnew_bonus.c				\
 		ft_lstclear_bonus.c		ft_lstlast_bonus.c		ft_lstsize_bonus.c
-HEADER_BONUS = libft_bonus.h
 
 #Regla por defecto: compilar todo
 all: $(NAME)
@@ -42,7 +41,7 @@ re: fclean all
 #Regla para añadir los archivos bonus a la compilacion de la libreria
 bonus:
 	$(CC) $(CFLAGS) -c $(BONUS) $(FILES)
-	ar rcs $(NAME) $(OBJECTS) $(HEADER_BONUS)
+	ar rcs $(NAME) $(OBJECTS) $(HEADER)
 
 #Indicamos que estas reglas no son archivos
 .PHONY: all clean fclean re bonus

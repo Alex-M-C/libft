@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 //Counts the number of nodes from the list LST
 int	ft_lstsize(t_list *lst)

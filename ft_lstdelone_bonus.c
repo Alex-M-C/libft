@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft_bonus.h"
+#include "libft.h"
 
 /*
 Frees the memory of CONTENT from the node LST using function DEL,

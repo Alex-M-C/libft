@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft_bonus.h"
+#include "libft.h"
 
 /*
 Erases an frees the node poited to by *LST and does the same for each node from 

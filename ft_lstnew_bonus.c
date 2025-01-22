@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft_bonus.h"
+#include "libft.h"
 
 /*
 Creates a new node, setting its content to 

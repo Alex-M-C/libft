@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 //@returns The last node of the list LST
 t_list	*ft_lstlast(t_list *lst)
