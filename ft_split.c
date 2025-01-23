@@ -34,8 +34,15 @@ static int	ft_wordcount(char const *s, char c)
 	return (count);
 }
 
-static void	*ft_fr(char **word_arr)
+static void	*ft_free_wa(char **word_arr)
 {
+	int	i;
+
+	i = 0;
+	while (word_arr[i])
+	{
+		free(word_arr[i++]);
+	}
 	free(word_arr);
 	return ((void *)0);
 }
@@ -65,7 +72,7 @@ char	**ft_split(char const *s, char c)
 			word_arr[pos] = ft_substr(s, count - word_len, word_len);
 			word_len = 0;
 			if (!word_arr[pos++])
-				return (ft_fr(word_arr));
+				return (ft_free_wa(word_arr));
 		}
 		else if (s[count++] != c)
 			word_len++;
@@ -81,7 +88,7 @@ int	main(void)
 	char	**result;
 	int		count;
 
-	result = ft_split("Llovia mucho ese dia", ' ');
+	result = ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", '^');
 	count = 0;
 	if (result)
 	{
@@ -94,7 +101,11 @@ int	main(void)
 	}
 	else
 		printf("%s\n", "null");
-	free(result);
+	count = 0;
+	while (result[count])
+	{
+		free(result[count]);
+	}
 	return (0);
 }
 */
