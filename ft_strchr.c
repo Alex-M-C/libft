@@ -10,8 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//@returns A pointer to the first occurrence of the character C in the string S
-//or NULL if any occurrence is found.
+/*
+@returns A pointer to the first occurrence of the character C in the string S
+or NULL if any occurrence is found.
+*/
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s != '\0')
@@ -24,20 +26,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return ((void *)0);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char	*result = ft_strchr("tripouille", 't' + 256);
-
-	if (!result)
-	{
-		printf("%s\n", "null");
-	}
-	else
-	{
-		printf("%s\n", result);
-	}
-}
-*/

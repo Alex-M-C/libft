@@ -13,9 +13,11 @@
 #include <stdlib.h>
 #include "libft.h"
 
-//Creates a duplicate of S usign malloc(3) to allocate its memory
-//@attention The created string can be freed with free(3)
-//@returns A pointer to the new string
+/*
+Creates a duplicate of S usign malloc(3) to allocate its memory.
+@attention The created string can be freed with free(3).
+@returns A pointer to the new string.
+*/
 char	*ft_strdup(const char *s)
 {
 	int		count;
@@ -33,21 +35,3 @@ char	*ft_strdup(const char *s)
 	s_dup[count] = '\0';
 	return (s_dup);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char	test1[] = "patata";
-	char	*result = ft_strdup(test1);
-
-	if (!result)
-	{
-		printf("%s\n", "No se pudo reservar memoria");
-	}
-	else
-	{
-		printf("%s\n", result);
-	}
-}
-*/

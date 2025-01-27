@@ -86,23 +86,3 @@ char	*ft_itoa(int n)
 		return ((void *)0);
 	return (ft_createstring(n, count, sign, result));
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*result;
-
-	result = ft_itoa(-1246712);
-	if (result)
-	{
-		printf("%s\n", result);
-	}
-	else
-	{
-		printf("%s\n", "null");
-	}
-	free(result);
-	return (0);
-}
-*/

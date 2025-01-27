@@ -13,9 +13,11 @@
 #include <stddef.h>
 #include "libft.h"
 
-//Compares the first N bytes of S1 and S2.
-//@returns The difference between the first distinct byte of S1 and S2
-//or 0 if they are equal within the N range.
+/*
+Compares the first N bytes of S1 and S2.
+@returns The difference between the first distinct byte of S1 and S2
+or 0 if they are equal within the N range.
+*/
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*s1_byte;
@@ -35,18 +37,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	//char	test[] = "patata";
-	//char	test2[] = "sandia";
-
-	int	test[] = {1,1,1,1};
-	int	test2[] = {1,1,1,1};
-
-	printf("%d\n", ft_memcmp(test, test2, 16));
-	printf("%d\n", memcmp(test, test2, 16));
-}
-*/

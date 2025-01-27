@@ -13,7 +13,11 @@
 #include <stdlib.h>
 #include "libft.h"
 
-//Iterates
+/*
+Iterates the list LST and applies function F to each node's content, creating
+another list with the changed contents of LST after F. DEL function is used if
+needed to free the new list that could't be created correctly.
+*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newlst;

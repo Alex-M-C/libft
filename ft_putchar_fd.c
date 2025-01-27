@@ -20,16 +20,3 @@ void	ft_putchar_fd(char c, int fd)
 	c_ptr = &c;
 	write(fd, c_ptr, 1);
 }
-
-/*
-#include <stdio.h>
-#include <fcntl.h>
-int	main(void)
-{
-	int	fd;
-
-	fd = open("arriba.txt", O_WRONLY | O_CREAT, 777);
-	ft_putchar_fd('F', fd);
-	close(fd);
-}
-*/

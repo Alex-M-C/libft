@@ -12,8 +12,10 @@
 
 #include <stddef.h>
 
-//Calculates the length of the string pointed to by STR, 
-//excluding the terminating NULL byte ('\0').
+/*
+Calculates the length of the string pointed to by STR, 
+excluding the terminating NULL byte ('\0').
+*/
 size_t	ft_strlen(const char *str)
 {
 	int	counter;

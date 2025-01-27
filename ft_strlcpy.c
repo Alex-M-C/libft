@@ -13,11 +13,13 @@
 #include <stddef.h>
 #include "libft.h"
 
-//Copies the string pointed to by SRC, including the terminating 
-//NULL byte ('\0'), to DEST. The copy is truncated if DEST length is
-//lower than SRC length, this can be checked by seeing the return value. 
-//@attention The strings may not overlap.
-//@returns The length of SRC
+/*
+Copies the string pointed to by SRC, including the terminating 
+NULL byte ('\0'), to DEST. The copy is truncated if DEST length is
+lower than SRC length, this can be checked by seeing the return value. 
+@attention The strings may not overlap.
+@returns The length of SRC
+*/
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	count;
@@ -36,17 +38,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	src[] = "Origen";
-	char	dest[4];
-	int		result;
-
-	result = ft_strlcpy(dest, src, 4);
-	printf("Dest: %s\n", dest);
-	printf("Long src: %d\n", result);
-}
-*/

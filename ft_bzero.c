@@ -12,8 +12,10 @@
 
 #include <stddef.h>
 
-//Erases data in the first N bytes of S by
-//replacing them with a NULL byte ('\0').
+/*
+Erases data in the first N bytes of S by
+replacing them with a NULL byte ('\0').
+*/
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*s_byte;
@@ -26,17 +28,3 @@ void	ft_bzero(void *s, size_t n)
 		s_byte++;
 	}
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char	test[] = "eeyyy";
-	char	test2[] = "eeyyy";
-
-	ft_bzero(test, 2);
-	bzero(test2, 2);
-	printf("%s\n", test);
-	printf("%s\n", test2);
-}
-*/

@@ -12,9 +12,11 @@
 
 #include <stddef.h>
 
-//Compares the first N bytes of the two strings S1 and S2
-//@returns The difference between the first distinct byte of S1 and S2
-//or 0 if they are equal within the N range.
+/*
+Compares the first N bytes of the two strings S1 and S2
+@returns The difference between the first distinct byte of S1 and S2
+or 0 if they are equal within the N range.
+*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	counter;
@@ -38,10 +40,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("%d", ft_strncmp("test\200", "test\0", 6));
-}
-*/

@@ -32,21 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 	c = (n % 10) + '0';
 	write(fd, &c, 1);
 }
-/*
-#include <stdio.h>
-#include <fcntl.h>
-int	main(void)
-{
-	int	fd;
-
-	fd = open("arriba.txt", O_WRONLY | O_CREAT | O_TRUNC);
-	if (fd == -1)
-	{
-		close(fd);
-		return (1);
-	}
-	ft_putnbr_fd(-(__INT32_MAX__) - 1, fd);
-	close(fd);
-	return (0);
-}
-*/

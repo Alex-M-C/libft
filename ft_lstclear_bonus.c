@@ -14,7 +14,7 @@
 #include "libft.h"
 
 /*
-Erases an frees the node poited to by *LST and does the same for each node from 
+Erases an frees the node poited to by *LST and does the same for each node from
 the list LST using the function DEL and free(3). At the end, the pointer to the
 list must be NULL.
 */

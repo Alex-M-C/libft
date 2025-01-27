@@ -10,9 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//To each character in the string S, the function F is applied giving as
-//parameters the index of each character within S and the address of 
-//the character itself, which can be modified if necessary.
+/*
+To each character in the string S, the function F is applied giving as
+parameters the index of each character within S and the address of 
+the character itself, which can be modified if necessary.
+*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int		count;

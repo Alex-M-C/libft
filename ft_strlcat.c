@@ -13,10 +13,12 @@
 #include <stddef.h>
 #include "libft.h"
 
-//Appends the SRC string to the DEST string.
-//@attention Both strings must be NULL-terminated and must not overlap
-//@returns The total length of the string it tried to create or the length
-//needed if the DEST size is not enough to concatenate SRC
+/*
+Appends the SRC string to the DEST string.
+@attention Both strings must be NULL-terminated and must not overlap
+@returns The total length of the string it tried to create or the length
+needed if the DEST size is not enough to concatenate SRC
+*/
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	counter;

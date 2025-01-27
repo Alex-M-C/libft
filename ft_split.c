@@ -47,11 +47,13 @@ static void	*ft_free_wa(char **word_arr)
 	return ((void *)0);
 }
 
-//Allocates memory with malloc(3) for a string array that will contain 
-//each word of the string S separated by the delimiter C.
-//@attention The resultant array must end in a NULL pointer.
-//@returns The created array with the separated words or NULL if malloc(3) 
-//fails.
+/*
+Allocates memory with malloc(3) for a string array that will contain 
+each word of the string S separated by the delimiter C.
+@attention The resultant array must end in a NULL pointer.
+@returns The created array with the separated words or NULL if malloc(3) 
+fails.
+*/
 char	**ft_split(char const *s, char c)
 {
 	char		**word_arr;
@@ -80,32 +82,3 @@ char	**ft_split(char const *s, char c)
 	word_arr[pos] = (void *)0;
 	return (word_arr);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	**result;
-	int		count;
-
-	result = ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", '^');
-	count = 0;
-	if (result)
-	{
-		printf("Length: %d\n", ft_wordcount("Llovia mucho ese dia", ' ') + 1);
-		while (result[count])
-		{
-			printf("%s\n", result[count]);
-			count++;
-		}
-	}
-	else
-		printf("%s\n", "null");
-	count = 0;
-	while (result[count])
-	{
-		free(result[count]);
-	}
-	return (0);
-}
-*/

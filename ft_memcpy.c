@@ -12,10 +12,12 @@
 
 #include <stddef.h>
 
-//Copies N bytes from memory area SRC to memory area DEST.
-//@attention The memory areas must not overlap.
-//Use ft_memmove(3) if the memory areas do overlap.
-//@returns A pointer to DEST.
+/*
+Copies N bytes from memory area SRC to memory area DEST.
+@attention The memory areas must not overlap.
+Use ft_memmove(3) if the memory areas do overlap.
+@returns A pointer to DEST.
+*/
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	int					count;
@@ -35,17 +37,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest_byte);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char	test[] = "patata";
-	char	test2[] = "sandia";
-
-	ft_memcpy(test, test2, 4);
-	//memcpy(test, test2, 4);
-	printf("%s\n", test);
-	printf("%s\n", test2);
-}
-*/

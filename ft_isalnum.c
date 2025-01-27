@@ -21,14 +21,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-/*
-#include <stdio.h>
-#include <ctype.h>
-int	main(void)
-{
-	char	test = '/';
-
-	printf("%d\n", ft_isalnum(test));
-	printf("%d\n", isalnum(test));
-}
-*/

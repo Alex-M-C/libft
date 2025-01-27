@@ -28,11 +28,13 @@ static char	*check_match(char *str, char *to_find, char *tf_start_ptr, size_t n)
 	return (to_find);
 }
 
-//Finds the first occurrence of the substring TO_FIND 
-//in the string STR within the first N bytes.
-//The terminating NULL bytes ('\0') are not compared.
-//@returns A pointer to the beginning of the located substring, 
-//or NULL if the substring is not found.
+/*
+Finds the first occurrence of the substring TO_FIND 
+in the string STR within the first N bytes.
+The terminating NULL bytes ('\0') are not compared.
+@returns A pointer to the beginning of the located substring, 
+or NULL if the substring is not found.
+*/
 char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
 	char	*coincidence_ptr;
@@ -59,18 +61,3 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 	}
 	return ((void *)0);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char	test1[] = "aaabcabcd";
-	char	test2[] = "a";
-	char	*result = ft_strnstr(test1, test2, -1);
-
-	if (result)
-		printf("%s\n", result);
-	else
-		printf("%s\n", "(null)");
-}
-*/

@@ -12,9 +12,11 @@
 
 #include <stddef.h>
 
-//Fills the first N bytes of the memory area 
-//pointed to by S with the constant byte C.
-//@returns A pointer to the memory area S.
+/*
+Fills the first N bytes of the memory area 
+pointed to by S with the constant byte C.
+@returns A pointer to the memory area S.
+*/
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*ptr_byte;
@@ -29,17 +31,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (ptr_byte);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char	test[] = "eeyyy";
-	char	test2[] = "eeyyy";
-
-	ft_memset(test, 'a', sizeof(test));
-	memset(test2, 'a', sizeof(test2));
-	printf("%s\n", test);
-	printf("%s\n", test2);
-}
-*/

@@ -12,10 +12,12 @@
 
 #include <stddef.h>
 
-//Scans the initial N bytes of the memory area 
-//pointed to by S for the first instance of C.
-//@return A pointer to the matching byte or
-//NULL if the character does not occur in the given memory area.
+/*
+Scans the initial N bytes of the memory area 
+pointed to by S for the first instance of C.
+@return A pointer to the matching byte or
+NULL if the character does not occur in the given memory area.
+*/
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			count;
@@ -34,24 +36,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return ((void *)0);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char	test[] = "sandia";
-	char	*result1 = ft_memchr(test, 'x', 4);
-	char	*result2 = memchr(test, 'x', 4);
-
-	if (result1 != NULL || result2 != NULL)
-	{
-		printf("%s\n", result1);
-		printf("%s\n", result2);
-	}
-	else
-	{
-		printf("%p\n", result1);
-		printf("%p\n", result2);
-	}
-}
-*/

@@ -25,17 +25,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	t_list	*node1;
-	t_list	*node2;
-
-	node1 = ft_lstnew("algo1");
-	node2 = ft_lstnew("algo2");
-	node1->next = node2;
-	printf("%d\n", ft_lstsize(node1));
-}
-*/

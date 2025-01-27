@@ -23,19 +23,3 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (lst);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	t_list	*l = ((void *)0);
-	t_list	*expected;
-	t_list	*actual;
-
-	expected = ((void *)0);
-	actual = ft_lstlast(l);
-	if (actual == expected)
-		return (0);
-	return (1);
-}
-*/

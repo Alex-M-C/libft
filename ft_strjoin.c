@@ -13,10 +13,12 @@
 #include <stdlib.h>
 #include "libft.h"
 
-//Allocates memory with malloc(3) for creating a string
-//resulting in the concatenation of S1 and S2, ensuring 
-//that the new string will be NULL-terminated ('\0').
-//@returns The created string or NULL if malloc(3) fails.
+/*
+Allocates memory with malloc(3) for creating a string
+resulting in the concatenation of S1 and S2, ensuring 
+that the new string will be NULL-terminated ('\0').
+@returns The created string or NULL if malloc(3) fails.
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*newstr;
@@ -42,18 +44,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	newstr[count + s1_len] = '\0';
 	return (newstr);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*result;
-
-	result = ft_strjoin("Para", "brisas");
-	if (result)
-		printf("%s", result);
-	else
-		printf("%s", "null");
-	return (0);
-}
-*/

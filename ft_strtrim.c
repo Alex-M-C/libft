@@ -13,10 +13,12 @@
 #include <stdlib.h>
 #include "libft.h"
 
-//Removes all characters from the string SET from the beginning and from the
-//end of S1, until a character not belonging to SET is found. The resulting
-//string allocated with malloc(3).
-//@returns A copy of S1 after removing what needed or NULL if malloc(3) fails.
+/*
+Removes all characters from the string SET from the beginning and from the
+end of S1, until a character not belonging to SET is found. The resulting
+string allocated with malloc(3).
+@returns A copy of S1 after removing what needed or NULL if malloc(3) fails.
+*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;
@@ -34,19 +36,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (ft_substr(s1, start, end - start));
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*result;
-
-	result = ft_strtrim("  |Espaciada   |", " |");
-	if (result)
-		printf("%s", result);
-	else
-		printf("%s", "null");
-	free(result);
-	return (0);
-}
-*/

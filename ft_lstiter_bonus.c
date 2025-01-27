@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-//Iterates the list LST and applies function f to each node's content
+//Iterates the list LST and applies function F to each node's content
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)

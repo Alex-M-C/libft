@@ -19,16 +19,3 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
-
-/*
-#include <stdio.h>
-#include <fcntl.h>
-int	main(void)
-{
-	int	fd;
-
-	fd = open("arriba.txt", O_WRONLY | O_CREAT, 777);
-	ft_putendl_fd("Patata", fd);
-	close(fd);
-}
-*/

@@ -13,10 +13,12 @@
 #include <stdlib.h>
 #include "libft.h"
 
-//Allocates memory with malloc(3) for crating a substring from the
-//string S starting at START and with a length of LEN + 1 including 
-//the NULL byte ('\0') at the end.
-//@returns The created substring or NULL if malloc(3) fails.
+/*
+Allocates memory with malloc(3) for crating a substring from the
+string S starting at START and with a length of LEN + 1 including 
+the NULL byte ('\0') at the end.
+@returns The created substring or NULL if malloc(3) fails.
+*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*substr;
@@ -38,18 +40,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[count] = '\0';
 	return (substr);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	*result;
-
-	result = ft_substr("Parabrisa", 4, 5);
-	if (!result)
-		printf("%s", "null");
-	else
-		printf("%s", result);
-	free(result);
-	return (0);
-}
-*/

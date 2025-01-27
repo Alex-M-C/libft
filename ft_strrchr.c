@@ -10,8 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//@returns A pointer to the last occurrence of the character C in the string S
-//or NULL if no occurrence is found.
+/*
+@returns A pointer to the last occurrence of the character C in the string S
+or NULL if no occurrence is found.
+*/
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*match;
@@ -27,26 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 		match = (char *)s;
 	return (match);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char	*result = ft_strrchr("tripouille", 't' + 256);
-	char	str2[] = "bonjour";
-	char	*str;
-
-	if (!result)
-	{
-		printf("%s\n", "null");
-	}
-	else
-	{
-		printf("%s\n", result);
-	}
-	if (!(str = ft_strrchr(str2, 's')))
-		printf("%s\n", "NULL");
-	else
-		printf("%s\n", str);
-}
-*/

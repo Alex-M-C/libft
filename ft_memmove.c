@@ -12,9 +12,11 @@
 
 #include <stddef.h>
 
-//copies N bytes from memory area SRC to memory area DEST.
-//@attention The memory areas may overlap.
-//@returns A pointer to DEST.
+/*
+Copies N bytes from memory area SRC to memory area DEST.
+@attention The memory areas may overlap.
+@returns A pointer to DEST.
+*/
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t				count;
@@ -42,17 +44,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest_byte);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char	test[] = "patata";
-	char	test2[] = "sandia";
-
-	ft_memmove(test2 + 3, test2, 4);
-	//memmove(test2 + 3, test2, 4);
-	printf("%s\n", test);
-	printf("%s\n", test2);
-}
-*/

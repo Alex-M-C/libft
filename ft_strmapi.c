@@ -13,10 +13,12 @@
 #include <stdlib.h>
 #include "libft.h"
 
-//Applies function F to each character of the string S using as parameters the 
-//index as the first argument and the character itself as the second argument, 
-//storing it in a new string that had its space allocated with malloc(3).
-//@returns The created string or NULL if malloc(3) fails.
+/*
+Applies function F to each character of the string S using as parameters the 
+index as the first argument and the character itself as the second argument, 
+storing it in a new string that had its space allocated with malloc(3).
+@returns The created string or NULL if malloc(3) fails.
+*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*result;
@@ -34,30 +36,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	result[count] = '\0';
 	return (result);
 }
-/*
-char	shift_char(unsigned int index, char c)
-{
-	return (c + index);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*result;
-	char	(*f)(unsigned int, char);
-
-	f = shift_char;
-	result = ft_strmapi("Uno", f);
-	if (result)
-	{
-		printf("%s\n", result);
-	}
-	else
-	{
-		printf("%s\n", "null");
-	}
-	free(result);
-	return (0);
-}
-*/
