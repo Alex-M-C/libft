@@ -1,7 +1,7 @@
-#Nombre del ejecutable
+#Executable name
 NAME = libft.a
 
-#Compilador y flags
+#Compilator and flags
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
@@ -19,29 +19,29 @@ BONUS = ft_lstadd_back_bonus.c	ft_lstdelone_bonus.c	ft_lstmap_bonus.c				\
 		ft_lstclear_bonus.c		ft_lstlast_bonus.c		ft_lstsize_bonus.c
 B_OBJECTS = $(BONUS:.c=.o)
 
-#Regla por defecto: compilar todo
+#Default rule: compile all
 all: $(NAME)
 
-#Regla para crear la libreria
+#Rule to create the library
 $(NAME):
 	$(CC) $(CFLAGS) -c $(FILES)
 	ar rcs $(NAME) $(OBJECTS)
 
-#Regla para limpiar los archivos
+#Rule to clean all the created files
 clean:
 	rm -f $(OBJECTS) $(B_OBJECTS)
 
-#Regla para limpiar todo, incluyendo la libreria
+#Rule to clean all, including the library
 fclean: clean
 	rm -f $(NAME)
 
-#Regla para recompilar todo
+#Rule to recompile all
 re: fclean all
 
-#Regla para añadir los archivos bonus a la compilacion de la libreria
+#Rule to add bonus files to the library compilation
 bonus:
 	$(CC) $(CFLAGS) -c $(BONUS) $(FILES)
 	ar rcs $(NAME) $(B_OBJECTS) $(OBJECTS)
 
-#Indicamos que estas reglas no son archivos
+#Indicates that the next rules are not files
 .PHONY: all clean fclean re bonus
