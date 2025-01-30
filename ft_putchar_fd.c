@@ -17,6 +17,8 @@ void	ft_putchar_fd(char c, int fd)
 {
 	char	*c_ptr;
 
+	if (fd < 0)
+		return ;
 	c_ptr = &c;
 	write(fd, c_ptr, 1);
 }

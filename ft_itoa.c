@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 static int	ft_digitcount(int n)
 {
@@ -39,29 +40,6 @@ static char	*ft_createstring(int n, int count, int sign, char *result)
 	return (result);
 }
 
-static char	*ft_checkspecial(int n)
-{
-	char	*result;
-
-	if (n == 0)
-	{
-		result = (char *)malloc(2 * sizeof(char));
-		if (!result)
-			return ((void *)0);
-		result[0] = '0';
-		result[1] = '\0';
-		return (result);
-	}
-	else
-	{
-		result = (char *)malloc(12 * sizeof(char));
-		if (!result)
-			return ((void *)0);
-		result[1] = '2';
-		return (ft_createstring(147483648, 11, -1, result));
-	}
-}
-
 //Using malloc(3), generates a string containing the number N, 
 //negative numbers also work.
 char	*ft_itoa(int n)
@@ -70,8 +48,10 @@ char	*ft_itoa(int n)
 	int		sign;
 	int		count;
 
-	if (n == 0 || n == -(__INT32_MAX__) - 1)
-		return (ft_checkspecial(n));
+	if (n == 0)
+		return (ft_strdup("0"));
+	else if (n == -(__INT32_MAX__) - 1)
+		return (ft_strdup("-2147483648"));
 	sign = 1;
 	count = 0;
 	if (n < 0)
