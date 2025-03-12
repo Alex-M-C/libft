@@ -23,9 +23,11 @@ B_OBJECTS = $(BONUS:.c=.o)
 all: $(NAME)
 
 #Rule to create the library
-$(NAME):
-	$(CC) $(CFLAGS) -c $(FILES)
+$(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
+
+%.o: %.c ft_printf.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 #Rule to clean all the created files
 clean:
@@ -39,9 +41,9 @@ fclean: clean
 re: fclean all
 
 #Rule to add bonus files to the library compilation
-bonus:
-	$(CC) $(CFLAGS) -c $(BONUS) $(FILES)
-	ar rcs $(NAME) $(B_OBJECTS) $(OBJECTS)
+bonus: $(B_OBJECTS)
+	$(CC) $(CFLAGS) -c $(BONUS)
+	ar rcs $(NAME) $(B_OBJECTS)
 
 #Indicates that the next rules are not files
 .PHONY: all clean fclean re bonus
